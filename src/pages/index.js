@@ -1,21 +1,24 @@
 import React from "react"
+import { Transition, Transition as ReactTransition } from "react-transition-group"
 import { Link } from "gatsby"
+import styled from 'styled-components'
+import './index.css'
+import Navbar from '../components/general/navbar'
+import Intro from '../components/index/intro'
+import SEO from "../components/general/seo"
+import Wrapper from "../components/general/wrapper"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const StyledIndex = styled.div`
+
+`
 
 const IndexPage = () => (
-  <Layout>
+  <Wrapper>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+    <StyledIndex>
+      <Intro />
+    </StyledIndex>
+  </Wrapper>
 )
 
 export default IndexPage
