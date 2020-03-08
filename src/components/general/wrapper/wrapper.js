@@ -8,7 +8,7 @@ import Navbar from '../navbar/navbar'
 
 const loader = () => <div>loading</div>
 const LoadableWrapperScroll = Loadable({
-    loader: () => import("./wrapperScroll/WrapperScroll"),
+    loader: () => import("../../wrapperScroll"),
     loading: loader,
 })
 
