@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-
-const LocomotiveScroll = typeof window !== `undefined` ? require("locomotive-scroll") : null
+import LocomotiveScroll from "locomotive-scroll"
 
 const WrapperScroll = ({ children }) => {
     const _wrapperRef = useRef(null);
