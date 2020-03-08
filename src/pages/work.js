@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import LocomotiveScroll from 'locomotive-scroll'
 import Wrapper from '../components/general/Wrapper'
 import Navbar from '../components/general/navbar'
 

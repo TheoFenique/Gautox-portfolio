@@ -6,9 +6,9 @@ import './index.css'
 
 import Navbar from '../navbar/navbar'
 
-const loader = () => <div></div>
+const loader = () => <div>loading</div>
 const LoadableWrapperScroll = Loadable({
-    loader: () => import("./wrapper-scroll"),
+    loader: () => import("./WrapperScroll/WrapperScroll"),
     loading: loader,
 })
 

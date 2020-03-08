@@ -1,15 +1,15 @@
 import React, { useRef, useEffect } from 'react'
 
+const LocomotiveScroll = typeof window !== `undefined` ? require("locomotive-scroll") : null
+
 const WrapperScroll = ({ children }) => {
     const _wrapperRef = useRef(null);
     useEffect(() => {
-        import("locomotive-scroll").then(locomotiveModule => {
-            const scroll = new locomotiveModule.default({
-                el: _wrapperRef.current,
-                smooth: true,
-                inertia: 0.5,
-                getSpeed: true
-            })
+        const scroll = new LocomotiveScroll({
+            el: _wrapperRef.current,
+            smooth: true,
+            inertia: 0.5,
+            getSpeed: true
         })
     }, [])
 
