@@ -5,20 +5,16 @@ import styled from 'styled-components'
 import './index.css'
 import Navbar from '../components/general/navbar'
 import Intro from '../components/index/intro'
-import SEO from "../components/general/seo"
-import Wrapper from "../components/general/wrapper"
+import Wrapper from "../components/general/Wrapper"
 
 const StyledIndex = styled.div`
 
 `
 
 const IndexPage = () => (
-  <Wrapper>
-    <SEO title="Home" />
-    <StyledIndex>
-      <Intro />
-    </StyledIndex>
-  </Wrapper>
+  <StyledIndex>
+    <Intro />
+  </StyledIndex>
 )
 
 export default IndexPage

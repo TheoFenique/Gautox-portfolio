@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 const StyledNavbar = styled.div`
     box-sizing: border-box;
@@ -42,10 +43,10 @@ const Navbar = () => {
                 <p>bg</p>
             </div>
             <div className="navbar__container--links">
-                <a href="/">Home</a>
-                <a href="/work">Work</a>
-                <a href="">About me</a>
-                <a href="">Contact</a>
+                <Link to="/">Home</Link>
+                <Link to="/work">Work</Link>
+                <Link to="">About me</Link>
+                <Link to="">Contact</Link>
             </div>
         </StyledNavbar>
     )

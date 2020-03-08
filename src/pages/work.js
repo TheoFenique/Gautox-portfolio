@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import LocomotiveScroll from 'locomotive-scroll'
-import Wrapper from '../components/general/wrapper'
+import Wrapper from '../components/general/Wrapper'
 import Navbar from '../components/general/navbar'
 
 import airbnb from '../assets/work/img/airbnb.png'
@@ -140,22 +140,20 @@ export const Work = () => {
     // }, []);
 
     return (
-        <Wrapper>
-            <StyledWork>
-                <div ref={projectsContainer} className="work__container--list">
-                    {workList.map((v, i, a) =>
-                        <div data-scroll-section key={i} className={"list__container--single" + " pos" + i}>
-                            <div data-scroll data-scroll-offset="-50%" data-scroll-speed={speed[i]} data-scroll-direction="vertical" className={"single__container--main pos" + i}>
-                                <div className="single__container--img">
-                                    <img src={v.img} alt="" />
-                                </div>
-                                <span>{v.name}</span>
+        <StyledWork>
+            <div ref={projectsContainer} className="work__container--list">
+                {workList.map((v, i, a) =>
+                    <div data-scroll-section key={i} className={"list__container--single" + " pos" + i}>
+                        <div data-scroll data-scroll-offset="-50%" data-scroll-speed={speed[i]} data-scroll-direction="vertical" className={"single__container--main pos" + i}>
+                            <div className="single__container--img">
+                                <img src={v.img} alt="" />
                             </div>
+                            <span>{v.name}</span>
                         </div>
-                    )}
-                </div>
-            </StyledWork>
-        </Wrapper>
+                    </div>
+                )}
+            </div>
+        </StyledWork>
     )
 }
 

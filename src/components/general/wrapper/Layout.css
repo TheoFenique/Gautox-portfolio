@@ -1,0 +1,16 @@
+.Layout {
+    background: #04020F;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.wrapper-scrollable {
+    position: absolute;
+    width: 100vw;
+}
+
+* {
+    color: white;
+}

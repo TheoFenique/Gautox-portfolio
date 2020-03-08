@@ -1,0 +1,13 @@
+.Wrapper {
+    background: #04020F;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.Wrapper-scrollable {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+}

@@ -1,43 +1,67 @@
-import React, { useEffect, useRef } from 'react';
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import React, { useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
-import LocomotiveScroll from 'locomotive-scroll'
+import './index.css'
 
-import Navbar from '../navbar';
+import Navbar from '../navbar/navbar'
 
-const StyledWrapper = styled.div`
-background: #04020F;
-width: 100vw;
-height: 100vh;
-overflow: hidden;
+const duration = 0.5
 
-.wrapper-scrollable {
-    position: absolute;
-    width: 100vw;
+const variants = {
+    initial: {
+        opacity: 0,
+    },
+    enter: {
+        opacity: 1,
+        transition: {
+            duration: duration,
+            delay: duration,
+            when: 'beforeChildren',
+        },
+    },
+    exit: {
+        opacity: 0,
+        transition: { duration: duration },
+    },
 }
-`
 
-export const Wrapper = (props) => {
-    const _wrapperRef = React.createRef();
-
+const Wrapper = ({ children, location }) => {
     useEffect(() => {
-        const scrollObj = new LocomotiveScroll({
-            el: _wrapperRef.current,
-            smooth: true,
-            inertia: 0.5,
-            getSpeed: true
-        });
+        import("locomotive-scroll").then(locomotiveModule => {
+            const scroll = new locomotiveModule.default({
+                el: document.querySelector(".Wrapper-scrollable"),
+                smooth: true,
+                inertia: 0.5,
+                getSpeed: true
+            })
+        })
     }, [])
 
-
     return (
-        <StyledWrapper className="wrapper">
+        <div className="Wrapper">
             <Navbar />
-            <div data-scroll-container ref={_wrapperRef} className="wrapper-scrollable" >
-                {props.children}
+            <div
+                style={{
+                    margin: `60px auto 0`,
+                    maxWidth: 960,
+                    padding: `1em`,
+                }}
+            >
+                <AnimatePresence>
+                    <motion.main
+                        key={location.pathname}
+                        variants={variants}
+                        initial="initial"
+                        animate="enter"
+                        exit="exit"
+                    >
+                        <div data-scroll-container className="Wrapper-scrollable">
+                            {children}
+                        </div>
+                    </motion.main>
+                </AnimatePresence>
             </div>
-        </StyledWrapper>
+        </div>
     )
 }
 
