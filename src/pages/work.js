@@ -105,39 +105,9 @@ const StyledWork = styled.div`
 `
 
 export const Work = () => {
-
-    const [scrollPos, setScrollPos] = useState(0);
     const projectsContainer = useRef(null);
-    const [current, setCurrent] = useState(0);
 
     const speed = [2, 3, 1, 5, 2]
-    const height = window.innerHeight;
-
-    // const handleScroll = (projects) => {
-    //     let mapCurrent = 0;
-    //     projects.map((v, i, a) => {
-    //         var innerHeight = v.offsetHeight
-    //         var rect = v.getBoundingClientRect();
-    //         let ratio = (((rect.top + innerHeight / 2) / (height)) * 100 - 50) * 0.001;
-    //         v.style.transform = `rotate(${-Math.cos((ratio + 0.5) * 3.14) * 56}deg) translateX(${(Math.cos(Math.abs(ratio * Math.PI)) * 195) - 180}vw)`
-    //         if (ratio < 0.033 && ratio > -0.033) {
-    //             mapCurrent = i
-    //         }
-    //     })
-    //     setCurrent(mapCurrent)
-    //     console.log("oui")
-    // }
-
-    // useEffect(() => {
-
-    //     const projectsArray = ([...projectsContainer.current.querySelectorAll(".list__container--single")])
-    //     handleScroll(projectsArray)
-    //     window.addEventListener('scroll', () => handleScroll(projectsArray), true)
-
-    //     return (
-    //         window.removeEventListener('wheel', handleScroll)
-    //     )
-    // }, []);
 
     return (
         <StyledWork>

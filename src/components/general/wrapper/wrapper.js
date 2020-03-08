@@ -1,9 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
+import Loadable from 'react-loadable'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import './index.css'
 
 import Navbar from '../navbar/navbar'
+
+const loader = () => <div></div>
+const LoadableWrapperScroll = Loadable({
+    loader: () => import("./wrapper-scroll"),
+    loading: loader,
+})
 
 const duration = 0.5
 
@@ -26,16 +33,6 @@ const variants = {
 }
 
 const Wrapper = ({ children, location }) => {
-    useEffect(() => {
-        import("locomotive-scroll").then(locomotiveModule => {
-            const scroll = new locomotiveModule.default({
-                el: document.querySelector(".Wrapper-scrollable"),
-                smooth: true,
-                inertia: 0.5,
-                getSpeed: true
-            })
-        })
-    }, [])
 
     return (
         <div className="Wrapper">
@@ -55,9 +52,9 @@ const Wrapper = ({ children, location }) => {
                         animate="enter"
                         exit="exit"
                     >
-                        <div data-scroll-container className="Wrapper-scrollable">
+                        <LoadableWrapperScroll>
                             {children}
-                        </div>
+                        </LoadableWrapperScroll>
                     </motion.main>
                 </AnimatePresence>
             </div>
