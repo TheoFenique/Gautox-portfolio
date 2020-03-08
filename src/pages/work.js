@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import Wrapper from '../components/general/Wrapper'
+import Wrapper from '../components/general/wrapper'
 import Navbar from '../components/general/navbar'
 
 import airbnb from '../assets/work/img/airbnb.png'

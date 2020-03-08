@@ -1,5 +1,5 @@
 import React from "react";
-import Wrapper from "./src/components/general/Wrapper";
+import Wrapper from "./src/components/general/wrapper";
 
 const transitionDelay = 500;
 
