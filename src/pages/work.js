@@ -13,7 +13,7 @@ const StyledWork = styled.div`
         display: block;
         width: 100%;
         height: 300px;
-        margin: 28vh 0;
+        margin: 20vh 0;
 
         &.current {
             span {
@@ -86,7 +86,7 @@ const StyledWork = styled.div`
                 }
             }
 
-            span {
+            a {
                 color: white;
                 font-size: 140px;
                 font-family: 'Spectral';
@@ -94,6 +94,7 @@ const StyledWork = styled.div`
                 -webkit-text-stroke-color: #fff;
                 color: rgba(0,0,0,0);
                 transition: all 0.1s;
+                text-decoration: none;
             }
         }
 
@@ -105,20 +106,20 @@ const StyledWork = styled.div`
 export const Work = () => {
     const projectsContainer = useRef(null);
 
-    const speed = [2, 3, 1, 5, 2]
+    const speed = [2, 6, 1, 2, 4]
 
     return (
         <StyledWork>
             <div ref={projectsContainer} className="work__container--list">
                 {workList.map((v, i, a) =>
-                    <Link to={v.link} data-scroll-section key={i} className={"list__container--single" + " pos" + i}>
+                    <div to={v.link} data-scroll-section key={i} className={"list__container--single" + " pos" + i}>
                         <div data-scroll data-scroll-offset="-50%" data-scroll-speed={speed[i]} data-scroll-direction="vertical" className={"single__container--main pos" + i}>
                             <div className="single__container--img">
                                 <img src={v.img} alt="" />
                             </div>
-                            <span>{v.name}</span>
+                            <Link to={v.link}>{v.name}</Link>
                         </div>
-                    </Link>
+                    </div>
                 )}
             </div>
         </StyledWork>

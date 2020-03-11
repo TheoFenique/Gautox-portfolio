@@ -11,7 +11,7 @@ body {
 *{
   font-family: circular;
   font-size: 16px;
-
+  line-height: 1.5;
 }
 
 /*! locomotive-scroll v3.3.9 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
