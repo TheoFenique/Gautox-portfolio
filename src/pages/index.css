@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+h1, h2 {
+  font-family: 'Spectral';
+}
+
 *{
   font-family: circular;
   font-size: 16px;

@@ -10,11 +10,13 @@ const StyledIntro = styled.div`
         color: white;
         font-size: 72px;
         width:750px;
-        font-family: 'Playfair Display';
+        font-family: 'Spectral';
     }
 
    span {
        color: #F02D40;
+       font-family: 'Spectral';
+       font-size: 72px;
    }
 
    h1 {

@@ -27,7 +27,7 @@ const StyledAirbnb = styled.div`
 
     .header__container--titles {
         position: absolute;
-        top: 61%;
+        top: 71%;
         right: 5%;
 
         h1 {
