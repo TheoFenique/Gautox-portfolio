@@ -13,7 +13,7 @@ const StyledWork = styled.div`
         display: block;
         width: 100%;
         height: 300px;
-        margin: 20vh 0;
+        margin: 12vh 0;
 
         &.current {
             span {
@@ -90,7 +90,7 @@ const StyledWork = styled.div`
                 color: white;
                 font-size: 140px;
                 font-family: 'Spectral';
-                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: #fff;
                 color: rgba(0,0,0,0);
                 transition: all 0.1s;

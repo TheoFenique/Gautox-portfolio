@@ -8,8 +8,8 @@ body {
     margin: 0;
 }
 
-h1, h2 {
-  font-family: 'Spectral';
+h1 {
+  font-weight: 400;
 }
 
 *{
