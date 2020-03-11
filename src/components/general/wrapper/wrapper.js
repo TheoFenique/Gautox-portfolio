@@ -37,27 +37,19 @@ const Wrapper = ({ children, location }) => {
     return (
         <div className="Wrapper">
             <Navbar />
-            <div
-                style={{
-                    margin: `60px auto 0`,
-                    maxWidth: 960,
-                    padding: `1em`,
-                }}
-            >
-                <AnimatePresence>
-                    <motion.main
-                        key={location.pathname}
-                        variants={variants}
-                        initial="initial"
-                        animate="enter"
-                        exit="exit"
-                    >
-                        <LoadableWrapperScroll>
-                            {children}
-                        </LoadableWrapperScroll>
-                    </motion.main>
-                </AnimatePresence>
-            </div>
+            <AnimatePresence>
+                <motion.main
+                    key={location.pathname}
+                    variants={variants}
+                    initial="initial"
+                    animate="enter"
+                    exit="exit"
+                >
+                    <LoadableWrapperScroll>
+                        {children}
+                    </LoadableWrapperScroll>
+                </motion.main>
+            </AnimatePresence>
         </div>
     )
 }

@@ -8,6 +8,12 @@ body {
     margin: 0;
 }
 
+*{
+  font-family: circular;
+  font-size: 16px;
+
+}
+
 /*! locomotive-scroll v3.3.9 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {
   overflow: hidden; }
@@ -42,7 +48,7 @@ html.has-scroll-dragging {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: black;
+  background-color: #04020F;
   opacity: 0.5;
   width: 7px;
   border-radius: 10px;

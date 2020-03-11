@@ -7,7 +7,7 @@ export const workList =
         {
             name: "Airbnb",
             img: airbnbimg,
-            link: "/"
+            link: "/work/airbnb"
         },
         {
             name: "Imcas",

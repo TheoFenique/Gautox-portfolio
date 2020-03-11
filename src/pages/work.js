@@ -1,10 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import Wrapper from '../components/general/wrapper'
-import Navbar from '../components/general/navbar'
 
-import airbnb from '../assets/work/img/airbnb.png'
 import { workList } from '../assets/work/json/worklist.js'
+import { Link } from 'gatsby'
 
 const StyledWork = styled.div`
 
@@ -12,6 +10,7 @@ const StyledWork = styled.div`
     box-sizing: border-box;
     .list__container--single {
         position: relative;
+        display: block;
         width: 100%;
         height: 300px;
         margin: 28vh 0;
@@ -112,14 +111,14 @@ export const Work = () => {
         <StyledWork>
             <div ref={projectsContainer} className="work__container--list">
                 {workList.map((v, i, a) =>
-                    <div data-scroll-section key={i} className={"list__container--single" + " pos" + i}>
+                    <Link to={v.link} data-scroll-section key={i} className={"list__container--single" + " pos" + i}>
                         <div data-scroll data-scroll-offset="-50%" data-scroll-speed={speed[i]} data-scroll-direction="vertical" className={"single__container--main pos" + i}>
                             <div className="single__container--img">
                                 <img src={v.img} alt="" />
                             </div>
                             <span>{v.name}</span>
                         </div>
-                    </div>
+                    </Link>
                 )}
             </div>
         </StyledWork>
