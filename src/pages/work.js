@@ -8,12 +8,13 @@ const StyledWork = styled.div`
 
 .work__container--list {
     box-sizing: border-box;
+    padding-top: 20vh;
     .list__container--single {
         position: relative;
         display: block;
         width: 100%;
         height: 300px;
-        margin: 12vh 0;
+        margin: 11vh 0;
 
         &.current {
             span {
@@ -113,7 +114,7 @@ export const Work = () => {
             <div ref={projectsContainer} className="work__container--list">
                 {workList.map((v, i, a) =>
                     <div to={v.link} data-scroll-section key={i} className={"list__container--single" + " pos" + i}>
-                        <div data-scroll data-scroll-offset="-50%" data-scroll-speed={speed[i]} data-scroll-direction="vertical" className={"single__container--main pos" + i}>
+                        <div data-scroll data-scroll-offset="-50%" data-scroll-speed={speed[i]} data-scroll-direction="horizontal" className={"single__container--main pos" + i}>
                             <div className="single__container--img">
                                 <img src={v.img} alt="" />
                             </div>

@@ -10,7 +10,6 @@ const StyledAirbnb = styled.div`
 
 .airbnb__container--header {
     margin-top: 116px;
-    height: calc(100vh - 116px);
     .main-image__container--img {
         width: 100vw;
         height: 75vh;
@@ -26,9 +25,16 @@ const StyledAirbnb = styled.div`
     }
 
     .header__container--titles {
-        position: absolute;
-        top: 71%;
-        right: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0 5%;
+
+        .titles__container--flex {
+            position: relative;
+            margin-top: -10%;
+            z-index: 10;
+        }
 
         h1 {
             color: white;
@@ -97,19 +103,21 @@ const Airbnb = () => {
                     <img src={mainImage} alt="" />
                 </div>
                 <div className="header__container--titles">
-                    <h1>Airbnb</h1>
-                    <div className="titles__container--undertitles">
-                        <div className="undertitles__container--roles">
-                            <span>Role</span>
-                            <small>Designer</small>
-                        </div>
-                        <div className="undertitles__container--roles">
-                            <span>Date</span>
-                            <small>June 2019</small>
-                        </div>
-                        <div className="undertitles__container--roles">
-                            <span>Type</span>
-                            <small>School project</small>
+                    <div className="titles__container--flex">
+                        <h1>Airbnb</h1>
+                        <div className="titles__container--undertitles">
+                            <div className="undertitles__container--roles">
+                                <span>Role</span>
+                                <small>Designer</small>
+                            </div>
+                            <div className="undertitles__container--roles">
+                                <span>Date</span>
+                                <small>June 2019</small>
+                            </div>
+                            <div className="undertitles__container--roles">
+                                <span>Type</span>
+                                <small>School project</small>
+                            </div>
                         </div>
                     </div>
                 </div>
