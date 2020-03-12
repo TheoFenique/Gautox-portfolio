@@ -114,7 +114,7 @@ export const Work = () => {
             <div ref={projectsContainer} className="work__container--list">
                 {workList.map((v, i, a) =>
                     <div to={v.link} data-scroll-section key={i} className={"list__container--single" + " pos" + i}>
-                        <div data-scroll data-scroll-offset="-50%" data-scroll-speed={speed[i]} data-scroll-direction="horizontal" className={"single__container--main pos" + i}>
+                        <div data-scroll data-scroll-offset="-50%" data-scroll-speed={speed[i]} data-scroll-direction="vertical" className={"single__container--main pos" + i}>
                             <div className="single__container--img">
                                 <img src={v.img} alt="" />
                             </div>
