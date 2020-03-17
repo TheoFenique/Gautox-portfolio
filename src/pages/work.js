@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import { workList } from '../assets/work/json/worklist.js'
@@ -116,13 +116,11 @@ const StyledWork = styled.div`
 `
 
 export const Work = () => {
-    const projectsContainer = useRef(null);
-
     const speed = [2, 5, 1, 2, 4]
 
     return (
         <StyledWork>
-            <div ref={projectsContainer} className="work__container--list">
+            <div className="work__container--list">
                 {workList.map((v, i, a) =>
                     <div to={v.link} data-scroll-section key={i} className={"list__container--single" + " pos" + i}>
                         <div data-scroll data-scroll-offset="-100%, -100%" data-scroll-speed={speed[i]} data-scroll-direction="vertical" className={"single__container--main pos" + i}>

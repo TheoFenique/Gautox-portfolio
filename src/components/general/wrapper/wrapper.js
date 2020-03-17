@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Loadable from 'react-loadable'
 import { motion, AnimatePresence } from 'framer-motion'
