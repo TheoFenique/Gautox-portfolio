@@ -9,12 +9,18 @@ const StyledWork = styled.div`
 .work__container--list {
     box-sizing: border-box;
     padding-top: 20vh;
+    overflow: hidden;
+
     .list__container--single {
         position: relative;
         display: block;
         width: 100%;
         height: 300px;
         margin: 10vh 0;
+
+         @media screen and (max-width : 800px) {
+            margin: 2vh 0;
+        }
 
         &.current {
             span {
@@ -26,8 +32,6 @@ const StyledWork = styled.div`
             position: absolute;
             width: fit-content;
 
-            
-
             &:hover {
                 .single__container--img {
                     position: absolute;
@@ -38,6 +42,10 @@ const StyledWork = styled.div`
                     width: 550px;
                     height: 343px;
                     z-index: -1;
+
+                    @media screen and (max-width: 1280px) {
+                        display: none;
+                    }
 
                     img {
                         position: absolute;
@@ -102,6 +110,13 @@ const StyledWork = styled.div`
                 color: rgba(255,255,255,0);
                 text-decoration: none;
                 transition: 0.6s all;
+
+                @media screen and (max-width: 800px){
+                    font-size: 82px;
+                }
+                @media screen and (max-width: 600px){
+                    font-size: 54px;
+                }
 
                 &:hover {
                     color: (255,255,255,1);

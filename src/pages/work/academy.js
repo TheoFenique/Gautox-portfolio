@@ -13,7 +13,7 @@ import mockupimg from '../../assets/airbnb/img/mockup.png'
 
 
 const StyledAcademy = styled.div`
-
+overflow: hidden;
 .academy__container--header {
     margin-top: 116px;
 
@@ -27,6 +27,10 @@ const StyledAcademy = styled.div`
             position: relative;
             margin-top: -10%;
             z-index: 10;
+
+            @media screen and (max-width : 1000px) {
+                margin-top: -18%;
+            }
 
             p, a{
                 color: white;
@@ -48,15 +52,20 @@ const StyledAcademy = styled.div`
             font-family: 'Spectral';
             font-size: 170px;
             margin: 0;
+
+            @media screen and (max-width : 1000px) {
+                font-size: 82px;
+            }
         }
 
         .titles__container--undertitles {
             display: flex;
+            width: 300px;
+            justify-content: space-between;
 
             .undertitles__container--roles {
                 display: flex;
                 flex-direction: column;
-                margin-right: 50px;
                 span, small {
                     display: block;
                     color: white;
@@ -75,8 +84,16 @@ const StyledAcademy = styled.div`
 .first__container--images {
     position: relative;
     width: 1000px;
-    height: 600px;
     margin: 100px auto;
+
+    @media screen and (max-width: 1000px){
+        width: 600px;
+        height: 360px;
+    }
+    @media screen and (max-width: 600px){
+        width: 360px;
+        height: 129px;
+    }
 
     img {
         width: 100%;
@@ -89,6 +106,10 @@ const StyledAcademy = styled.div`
     margin-top: 0px;
     width: 100%;
     height: fit-content;
+
+    @media screen and (max-width: 1000px) {
+        padding: 0 2%;
+    }
     
     .first__container--content, .second__container--content, .third__container--content {
         box-sizing: border-box;
@@ -157,7 +178,7 @@ const Academy = () => {
                 <Content title="Goal of the project">
                     Making the IMCAS Academy statistical report that show all the datas from the Imcas Academy users. I needed to think about a smart way to organize all the datas, and also a way to make it look appealing and not boring to scroll in.
                 </Content>
-                <div data-scroll data-scroll-offset="-150%, 150%" l className="first__container--images">
+                <div data-scroll data-scroll-offset="-150%, 150%" className="first__container--images">
                     <img data-scroll data-scroll-speed={-0.4} src={stats} />
                 </div>
             </div>
@@ -173,7 +194,7 @@ const Academy = () => {
                     While working on the e-learning platform of IMCAS, I also created a landing page which has not yet been released but will be put online for specific marketing purposes. This is how the “Above the fold” will look, since for confidentiality reason, I can’t show the entire layout.
                 </Content>
                 <div data-scroll className="third__container--images">
-                    <div ddata-scroll data-scroll-offset="-150%, 150%" className="first__container--images">
+                    <div data-scroll data-scroll-offset="-150%, 150%" className="first__container--images">
                         <img data-scroll data-scroll-speed={-0.4} src={landing} />
                     </div>
                 </div>

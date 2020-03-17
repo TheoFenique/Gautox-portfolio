@@ -13,7 +13,7 @@ import imca from '../../assets/imcas/imca.png'
 
 
 const StyledImcas = styled.div`
-
+overflow: hidden;
 .imcas__container--header {
     margin-top: 116px;
 
@@ -27,6 +27,10 @@ const StyledImcas = styled.div`
             position: relative;
             margin-top: -10%;
             z-index: 10;
+
+            @media screen and (max-width : 1000px) {
+                margin-top: -18%;
+            }
 
             p, a{
                 color: white;
@@ -48,15 +52,20 @@ const StyledImcas = styled.div`
             font-family: 'Spectral';
             font-size: 170px;
             margin: 0;
+
+            @media screen and (max-width : 1000px) {
+                font-size: 82px;
+            }
         }
 
         .titles__container--undertitles {
             display: flex;
+            width: 300px;
+            justify-content: space-between;
 
             .undertitles__container--roles {
                 display: flex;
                 flex-direction: column;
-                margin-right: 50px;
                 span, small {
                     display: block;
                     color: white;
@@ -76,9 +85,17 @@ const StyledImcas = styled.div`
     .first__container--images, .second__container--images {
         position: relative;
         padding-top: 50px; 
-        height: 600px;
         width: 1000px;
         margin: auto;
+        
+        @media screen and (max-width: 1000px){
+            width: 600px;
+            height: 360px;
+        }
+        @media screen and (max-width: 600px){
+            width: 360px;
+            height: 129px;
+        }
 
         img {
             width: 100%;
@@ -146,7 +163,7 @@ const Imcas = () => {
                             </div>
                             <div className="undertitles__container--roles">
                                 <span>Type</span>
-                                <small>School project</small>
+                                <small>Internship</small>
                             </div>
                         </div>
                         <p><a target="_blank" href="https://www.imcas.com/en">Launch</a></p>

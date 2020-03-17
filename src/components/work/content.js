@@ -8,6 +8,10 @@ align-items: baseline;
 justify-content: center;
 padding: 0 20%;
 
+ @media screen and (max-width : 1000px) {
+    padding: 0 1%;
+}
+
 h2 {
     box-sizing: border-box;
     padding: 0 ;

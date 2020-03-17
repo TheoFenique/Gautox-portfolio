@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import gautierlooking from '../../../assets/index/gautierislookingaway.jpg'
 import anime from '../../../assets/index/anime.png'
 import eden from '../../../assets/index/eden.png';
+import cv from '../../../assets/cv.pdf'
 
 
 const StyledAbout = styled.div`
@@ -15,7 +16,7 @@ const StyledAbout = styled.div`
     margin: auto;
 
     @media screen and (max-width : 414px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .about__container--text {
@@ -30,6 +31,7 @@ const StyledAbout = styled.div`
 h2 {
     color: white;
     font-size: 16px;
+    margin: 0;
 }
 
 p {
@@ -37,6 +39,11 @@ p {
     color: #9396A4;
     text-align: justify;
     line-height: 1.8;
+    margin: 0;
+
+    @media screen and (max-width: 400px){
+        width: 100%;
+    }
 }
 
 .about__container--passions {
@@ -171,11 +178,12 @@ p {
 }
 
 .email__container--content, .socials__container--content {
+    
     h2 {
         color: white;
     }
 
-    p, span {
+    p, a {
         color: #9396A4;
     }
 
@@ -189,6 +197,21 @@ p {
         width: 235px;
     }
 }
+
+.socials__container--content {
+    margin-top: 18px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: circular;
+    transition: 0.2s color;
+}
+
+a:hover {
+    color: #E72D43;
+}
 `
 
 const About = () => {
@@ -198,18 +221,18 @@ const About = () => {
                 <div className="about__container--text">
                     <div data-scroll className="about__container--content">
                         <h2>About</h2>
-                        <p>I’m a 20 years old interface designer and a third student at Hetic. I’m looking for a five-month internship starting early March 2020 in Japan but interested about anywhere in the world. I’m also passionate about video games, animes and I listen to music 24/7.</p>
+                        <p>I’m a 20 years old interface designer and a third year student at Hetic. I’m looking for a five/six-month internship starting early April 2020 anywhere in the world. I’m also passionate about video games, animes and I listen to music 24/7.</p>
                     </div>
                     <div data-scroll className="email__container--content">
                         <h2>Email</h2>
-                        <p>Send me an email to talk!</p>
+                        <p><a href="mailto:gautier.burias92@gmail.com">Send me an email to talk!</a></p>
                     </div>
                     <div data-scroll className="socials__container--content">
                         <h2>Social media</h2>
                         <div className="socials__container">
-                            <span>LinkedIn</span>
-                            <span>Dribbble</span>
-                            <span>Linkedin</span>
+                            <a target="_blank" href={cv}>Resume</a>
+                            <a target="_blank" href="https://www.linkedin.com/in/gautier-burias-a08a41164/">Linkedin</a>
+                            <a target="_blank" href="https://dribbble.com/GautierBurias">Dribbble</a>
                         </div>
                     </div>
                 </div>

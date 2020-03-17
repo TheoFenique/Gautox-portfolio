@@ -17,6 +17,7 @@ height: 100vh;
         font-size: 72px;
         width:750px;
         font-family: 'Spectral';
+        line-height: 1.5;
 
         @media screen and (max-width : 414px) {
             font-size: 48px

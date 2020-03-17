@@ -3,8 +3,13 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const StyledNextProject = styled.div`
+box-sizing: border-box;
 padding-left: 50%;
 margin-bottom: 150px;
+
+@media screen and (max-width: 800px) {
+    padding-left: 25%;
+}
 a {
     text-decoration: none;
     p {
@@ -17,6 +22,13 @@ a {
         font-family: 'Spectral';
         line-height: 1;
         transition: all 0.3s;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 120px;
+        }
+        @media screen and (max-width: 800px) {
+            font-size: 82px;
+        }
 
     }
     &:hover {

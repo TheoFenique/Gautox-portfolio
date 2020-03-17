@@ -8,11 +8,16 @@ const StyledMainImg = styled.div`
     overflow: hidden;
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
 
     img {
         width: 100%;
         margin: 50px auto;
+
+        @media screen and (max-width : 1000px) {
+            width: 200%;
+        }
     }
 }
 

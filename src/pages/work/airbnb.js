@@ -19,6 +19,7 @@ import NextProject from '../../components/work/nextproject'
 
 
 const StyledAirbnb = styled.div`
+overflow: hidden;
 
 .airbnb__container--header {
     margin-top: 116px;
@@ -33,6 +34,9 @@ const StyledAirbnb = styled.div`
             position: relative;
             margin-top: -10%;
             z-index: 10;
+            @media screen and (max-width : 1000px) {
+                margin-top: -18%;
+            }
         }
 
         h1 {
@@ -40,15 +44,21 @@ const StyledAirbnb = styled.div`
             font-family: 'Spectral';
             font-size: 170px;
             margin: 0;
+
+            @media screen and (max-width : 1000px) {
+                font-size: 82px;
+            }
+
         }
 
         .titles__container--undertitles {
             display: flex;
+            width: 300px;
+            justify-content: space-between;
 
             .undertitles__container--roles {
                 display: flex;
                 flex-direction: column;
-                margin-right: 50px;
                 span, small {
                     display: block;
                     color: white;
@@ -70,6 +80,10 @@ const StyledAirbnb = styled.div`
     margin-top: 50px;
     width: 100%;
     height: fit-content;
+
+    @media screen and (max-width: 1000px) {
+        padding: 0 2%;
+    }
     
     .first__container--content, .second__container--content, .third__container--content {
         box-sizing: border-box;
@@ -105,6 +119,7 @@ const StyledAirbnb = styled.div`
 
     .second__container--images {
         width: 800px;
+        max-width: 100%;
         margin: auto;
     }
 }
@@ -140,7 +155,7 @@ const Airbnb = () => {
                     It was a school project that I did with a friend. We needed to create an AirBnb app which allows people to book a weekend abroad quickly, by directly proposing activities, flights etc...
                 </Content>
                 <Content title="Goal of the project">
-                    The onboarding was theoretically quite easy to publish something to npm. You create an account on npmjs.com, run npm login and then run npm publish. Your current project directory will get packaged up and put on the web.
+                    A quick week end booking app so the number of clicks should be as low as possible. We recommend activities, destinations, flights, but let the user choose from a variety of choice.
                 </Content>
                 <div data-scroll className="first__container--images">
                     <Mockup direction={"-0.4"} title="Home" img={mockupimg1} />
@@ -170,7 +185,7 @@ const Airbnb = () => {
                     <Mockup direction={"-0.3"} title="Explore" img={mockupimg9} />
                 </div>
             </div>
-            <NextProject link="/work/imcas" />
+            <NextProject link="/work/portfolio" />
         </StyledAirbnb>
     )
 }

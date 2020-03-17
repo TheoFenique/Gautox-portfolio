@@ -14,7 +14,7 @@ import header from '../../assets/portfolio/header.jpg'
 
 
 const StyledPortfolio = styled.div`
-
+overflow: hidden;
 .portfolio__container--header {
     margin-top: 116px;
 
@@ -28,22 +28,31 @@ const StyledPortfolio = styled.div`
             position: relative;
             margin-top: -10%;
             z-index: 10;
-        }
 
-        h1 {
-            color: white;
-            font-family: 'Spectral';
-            font-size: 170px;
-            margin: 0;
+            @media screen and (max-width : 1000px) {
+                margin-top: -18%;
+            }
+
+            h1 {
+                color: white;
+                font-family: 'Spectral';
+                font-size: 170px;
+                margin: 0;
+
+                @media screen and (max-width : 1000px) {
+                    font-size: 82px;
+                }
+            }
         }
 
         .titles__container--undertitles {
             display: flex;
+            width: 350px;
+            justify-content: space-between;
 
             .undertitles__container--roles {
                 display: flex;
-                flex-direction: column;
-                margin-right: 50px;
+                flex-direction: column; 
                 span, small {
                     display: block;
                     color: white;
@@ -66,6 +75,15 @@ const StyledPortfolio = styled.div`
         height: 600px;
         width: 1000px;
         margin: auto;
+
+        @media screen and (max-width: 1000px){
+        width: 600px;
+        height: 360px;
+        }
+        @media screen and (max-width: 600px){
+            width: 360px;
+            height: 129px;
+        }
 
         img {
             width: 100%;
@@ -121,9 +139,21 @@ const StyledPortfolio = styled.div`
     width: 1000px;
     height: 675px;
     margin: 0px auto 100px auto;
+
+    @media screen and (max-width: 1000px){
+       flex-direction: column-reverse;
+       width: 95%;
+       height: 1275px;
+    }
+
     img {
         width: 45%;
 
+        @media screen and (max-width: 1000px){
+            margin: 40px auto;
+            width: 350px;
+            height: 565px;
+        }
     }
 }
 `

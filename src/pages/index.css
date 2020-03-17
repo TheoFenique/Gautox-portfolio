@@ -15,7 +15,20 @@ h1 {
 *{
   font-family: circular;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.8;
+}
+
+*::selection {
+  background-color: #E72D43;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.2s color;
+}
+
+* a:hover {
+  color: #E72D43;
 }
 
 /*! locomotive-scroll v3.3.9 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
