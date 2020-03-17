@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import styled from 'styled-components'
 import Loadable from 'react-loadable'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -11,6 +12,29 @@ const LoadableWrapperScroll = Loadable({
     loader: () => import("../../wrapperScroll"),
     loading: loader,
 })
+
+
+const StyledWrapper = styled.div`
+background: #03020c;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+
+
+.Wrapper-scrollable {
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    width: 100vw;
+    left: 0;
+}
+
+.main-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+`
 
 const duration = 0.5
 
@@ -35,7 +59,7 @@ const variants = {
 const Wrapper = ({ children, location }) => {
 
     return (
-        <div className="Wrapper">
+        <StyledWrapper className="Wrapper">
             <Navbar />
             <AnimatePresence>
                 <motion.main
@@ -46,11 +70,13 @@ const Wrapper = ({ children, location }) => {
                     exit="exit"
                 >
                     <LoadableWrapperScroll>
-                        {children}
+                        <div className="main-container">
+                            {children}
+                        </div>
                     </LoadableWrapperScroll>
                 </motion.main>
             </AnimatePresence>
-        </div>
+        </StyledWrapper>
     )
 }
 

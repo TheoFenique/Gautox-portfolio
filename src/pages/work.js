@@ -14,7 +14,7 @@ const StyledWork = styled.div`
         display: block;
         width: 100%;
         height: 300px;
-        margin: 11vh 0;
+        margin: 10vh 0;
 
         &.current {
             span {
@@ -25,6 +25,8 @@ const StyledWork = styled.div`
         .single__container--main {
             position: absolute;
             width: fit-content;
+
+            
 
             &:hover {
                 .single__container--img {
@@ -45,10 +47,14 @@ const StyledWork = styled.div`
                         height: 100%;
                     }
                 }
+
+                a {
+                    color: rgba(255,255,255,1);
+                }
             }
 
             &.pos0 {
-                left: 50%;
+                left: 40%;
             }
             &.pos1 {
                 left: 20%;
@@ -93,9 +99,14 @@ const StyledWork = styled.div`
                 font-family: 'Spectral';
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: #fff;
-                color: rgba(0,0,0,0);
-                transition: all 0.1s;
+                color: rgba(255,255,255,0);
                 text-decoration: none;
+                transition: 0.6s all;
+
+                &:hover {
+                    color: (255,255,255,1);
+                }
+
             }
         }
 
@@ -107,14 +118,14 @@ const StyledWork = styled.div`
 export const Work = () => {
     const projectsContainer = useRef(null);
 
-    const speed = [2, 6, 1, 2, 4]
+    const speed = [2, 5, 1, 2, 4]
 
     return (
         <StyledWork>
             <div ref={projectsContainer} className="work__container--list">
                 {workList.map((v, i, a) =>
                     <div to={v.link} data-scroll-section key={i} className={"list__container--single" + " pos" + i}>
-                        <div data-scroll data-scroll-offset="-50%" data-scroll-speed={speed[i]} data-scroll-direction="vertical" className={"single__container--main pos" + i}>
+                        <div data-scroll data-scroll-offset="-100%, -100%" data-scroll-speed={speed[i]} data-scroll-direction="vertical" className={"single__container--main pos" + i}>
                             <div className="single__container--img">
                                 <img src={v.img} alt="" />
                             </div>

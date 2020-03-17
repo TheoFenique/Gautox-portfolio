@@ -1,6 +1,7 @@
-import airbnbimg from '../img/airbnb.png'
-import imcasimg from '../img/imcas.png'
-import saldimg from '../img/salad.jpg'
+import airbnbimg from '../../airbnb/img/airbnb_thumbnail.jpg'
+import imcasimg from '../../imcas/imcas_thumbnail.jpg'
+import academyimg from '../../academy/thumbnail_finale.jpg'
+import nous from '../../portfolio/nous_thumbnail.jpg'
 
 export const workList =
     [
@@ -12,26 +13,16 @@ export const workList =
         {
             name: "Imcas",
             img: imcasimg,
-            link: "/"
+            link: "/work/imcas"
+        },
+        {
+            name: "Academy",
+            img: academyimg,
+            link: "/work/academy"
         },
         {
             name: "Portfolio",
-            img: saldimg,
-            link: "/"
+            img: nous,
+            link: "/work/portfolio"
         },
-        {
-            name: "Portfolio",
-            img: saldimg,
-            link: "/"
-        },
-        {
-            name: "Portfolio",
-            img: saldimg,
-            link: "/"
-        },
-        {
-            name: "Portfolio",
-            img: saldimg,
-            link: "/"
-        }
     ]

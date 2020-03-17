@@ -8,7 +8,8 @@ const WrapperScroll = ({ children }) => {
             el: _wrapperRef.current,
             smooth: true,
             inertia: 0.5,
-            getSpeed: true
+            getSpeed: true,
+            smoothMobile: true
         })
     }, [])
 
