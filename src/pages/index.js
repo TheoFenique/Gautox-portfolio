@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import './index.css'
 import Intro from '../components/index/intro'
 import About from "../components/index/about"
+import Works from "../components/index/works"
 
 const StyledIndex = styled.div`
 
@@ -11,7 +12,8 @@ const StyledIndex = styled.div`
 const IndexPage = () => (
   <StyledIndex>
     <Intro />
-    <About />
+    {/* <About /> */}
+    <Works/>
   </StyledIndex>
 )
 

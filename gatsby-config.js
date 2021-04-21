@@ -4,6 +4,9 @@ module.exports = {
       resolve: `gatsby-transformer-sharp`
     },
     {
+      resolve: `gatsby-plugin-styled-components`
+    },
+    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/favicon.png",

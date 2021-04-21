@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import logo from '../../../assets/navbar/logo.png'
+import { colors } from '../../../assets/style/colors'
 
 const StyledNavbar = styled.div`
 box-sizing: border-box;
@@ -12,52 +13,62 @@ justify-content: space-between;
 align-items: center;
 width: 100%;
 height: 116px;
-padding: 35px 5%;
 top: 0;
 left: 0;
 z-index: 100000000000000;
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1148px;
+    margin: 35px auto;
+}
+
 .navbar__container--logo {
     height: 100%;
 
-    img {
-        height: 100%;
+    span {
+        font-size: 48px;
+        font-family: 'nueue-bold';
+        color: ${props=>props.colors.contentDarker}
     }
 }
 
 .navbar__container--links {
     display: flex;
     justify-content: space-between;
-    width: 120px;
 }
 
 p {
     margin: 0;
-    color: red;
     font-family: circular;
 }
 
 a {
-    color: white;
-    text-decoration: none;
-    font-family: circular;
+    font-family: 'nueue-regular';
+    color: ${props=>props.colors.content};
     transition: 0.2s color;
+    margin-left: 56px;
 }
 
 a:hover {
-    color: #E72D43;
+    color: ${props=>props.colors.contentDark}
 }
 `
 
 
 const Navbar = () => {
     return (
-        <StyledNavbar>
-            <div className="navbar__container--logo">
-                <img src={logo} />
-            </div>
-            <div className="navbar__container--links">
-                <Link to="/">Home</Link>
-                <Link to="/work">Work</Link>
+        <StyledNavbar colors={colors}>
+            <div className="navbar__container">
+                <div className="navbar__container--logo">
+                    <span>G</span>
+                </div>
+                <div className="navbar__container--links">
+                    <Link to="/">Home</Link>
+                    <Link to="/work">Work</Link>
+                </div>
             </div>
         </StyledNavbar>
     )

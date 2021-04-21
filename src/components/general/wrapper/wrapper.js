@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Loadable from 'react-loadable'
 import { motion, AnimatePresence } from 'framer-motion'
+import { colors } from '../../../assets/style/colors'
 
 import './index.css'
 
@@ -15,7 +16,7 @@ const LoadableWrapperScroll = Loadable({
 
 
 const StyledWrapper = styled.div`
-background: #03020c;
+background: ${props => props.colors.background};
 width: 100vw;
 height: 100vh;
 overflow: hidden;
@@ -30,7 +31,7 @@ overflow: hidden;
 }
 
 .main-container {
-    max-width: 1600px;
+    max-width: 1148px;
     margin: 0 auto;
 }
 
@@ -59,7 +60,7 @@ const variants = {
 const Wrapper = ({ children, location }) => {
 
     return (
-        <StyledWrapper className="Wrapper">
+        <StyledWrapper colors={colors} className="Wrapper">
             <Navbar />
             <AnimatePresence>
                 <motion.main
