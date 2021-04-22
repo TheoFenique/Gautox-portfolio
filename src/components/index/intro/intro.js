@@ -10,10 +10,7 @@ display: flex;
 padding: 0;
 justify-content: flex-start;
 width: 100%;
-height: 250px;
 margin-top: 150px;
-
-
 
     h1, p {
         color: ${props=>props.colors.contentDark};

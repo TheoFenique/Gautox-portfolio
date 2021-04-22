@@ -6,7 +6,7 @@ const WrapperScroll = ({ children }) => {
     useEffect(() => {
         const scroll = new LocomotiveScroll({
             el: _wrapperRef.current,
-            smooth: true,
+            // smooth: true,
             inertia: 0.5,
             getSpeed: true,
             smoothMobile: true

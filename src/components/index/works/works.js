@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import { colors } from '../../../assets/style/colors'
 import Work from './work'
 import {worksList} from "./worksList"
@@ -10,14 +9,15 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 width: 100%;
+
 `
 
 
 const Works = () => {
     return (
-        <StyledWorks colors={colors} data-scroll-section>
+        <StyledWorks data-scroll-section colors={colors} >
             {worksList.map((v, i, a) => 
-                <Work key={i} title={v.title} content={v.content}/>
+                <Work data-scroll key={i} work={v}/>
             )}
         </StyledWorks>
     )

@@ -6,7 +6,7 @@ import { colors } from '../../../../assets/style/colors'
 const StyledWork = styled.div`
 position: relative;
 display: inline-block;
-width: 564px;
+width: 47.5%;
 margin-top: 55px;
 
 .container__content {
@@ -28,24 +28,27 @@ margin-top: 55px;
 
 .img__container{
     background: #1E9481;
-    height: 414px;
     width: 100%;
+
+    img {
+        width: 100%;
+    }
 }
 `
 
 
 const Work = (props) => {
     return (
-        <StyledWork colors={colors} data-scroll>
-            <div className="container">
-                <div className="img__container">
-                    <img src="" alt=""/>
+        <StyledWork data-scroll colors={colors} >
+            <Link data-scroll data-scroll-speed="1" data-scroll-direction="vertical"  to={props.work.link} className="container">
+                <div data-scroll className="img__container">
+                    <img data-scroll src={props.work.image} alt=""/>
                 </div>
-                <div className="container__content">
-                    <h3>{props.title}</h3>
-                    <p>{props.content}</p>
+                <div data-scroll className="container__content">
+                    <h3 data-scroll>{props.work.title}</h3>
+                    <p data-scroll>{props.work.content}</p>
                 </div>
-            </div>
+            </Link>
         </StyledWork>
     )
 }

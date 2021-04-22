@@ -10,75 +10,72 @@ import mockupimg from '../../assets/airbnb/img/mockup.png'
 import crowd from '../../assets/imcas/crowd.png'
 import feedback from '../../assets/imcas/feedback.png'
 import imca from '../../assets/imcas/imca.png'
+import { colors } from '../../assets/style/colors'
 
 
 const StyledImcas = styled.div`
 overflow: hidden;
 .imcas__container--header {
-    margin-top: 116px;
 
     .header__container--titles {
+    background: ${props=>props.colors.contentDarker};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 56px 5%;
+
+    .titles__container--flex {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        align-items: flex-end;
-        padding: 0 5%;
+        position: relative;
+        z-index: 10;
+        @media screen and (max-width : 1000px) {
+            margin-top: -18%;
+        }
+    }
 
-        .titles__container--flex {
-            position: relative;
-            margin-top: -10%;
-            z-index: 10;
-
-            @media screen and (max-width : 1000px) {
-                margin-top: -18%;
-            }
-
-            p, a{
-                color: white;
-                font-family: 'spectral';
-                font-size: 28px;
-                margin-top: 50px; 
-                transition: 0.4s all;
-                text-decoration: none;
-                cursor: pointer;
-
-                &:hover {
-                    transform: translateX(1.5%);
-                }
-            }
+    h1 {
+        color: white;
+        font-size: 32px;
+        margin: auto 0;
+        width: 60%;
+        color: ${props=>props.colors.content};
+        font-family: 'nueue-bold';
+        @media screen and (max-width : 1000px) {
+            font-size: 82px;
         }
 
-        h1 {
+        span {
             color: white;
-            font-family: 'Spectral';
-            font-size: 170px;
-            margin: 0;
-
-            @media screen and (max-width : 1000px) {
-                font-size: 82px;
-            }
-        }
-
-        .titles__container--undertitles {
-            display: flex;
-            width: 300px;
-            justify-content: space-between;
-
-            .undertitles__container--roles {
-                display: flex;
-                flex-direction: column;
-                span, small {
-                    display: block;
-                    color: white;
-                }
-
-                small {
-                    color: #9396A4;
-                    margin-top: 10px;
-                }
-            }
+            font-family: 'nueue-bold';
+            font-size: 32px;
         }
 
     }
+
+    .titles__container--undertitles {
+        width: 60%;
+        display: flex;
+        margin-top: 40px;
+
+        .undertitles__container--roles {
+            display: flex;
+            flex-direction: column;
+            margin-right: 80px;
+            span, small {
+                display: block;
+                color: white;
+            }
+
+            small {
+                color: #9396A4;
+                margin-top: 10px;
+            }
+        }
+    }
+}
 }
 
 .imcas__container--first,.imcas__container--second {
@@ -146,12 +143,12 @@ overflow: hidden;
 
 const Imcas = () => {
     return (
-        <StyledImcas>
+        <StyledImcas colors={colors}>
             <div data-scroll-section className="imcas__container--header">
                 <MainImg img={mainImage} />
                 <div className="header__container--titles">
                     <div className="titles__container--flex">
-                        <h1>Imcas</h1>
+                        <h1>During my internship at IMCAS, I worked on the digital team as the sole UX/UI designer and helped developers to improve the UX of the website.</h1>
                         <div className="titles__container--undertitles">
                             <div className="undertitles__container--roles">
                                 <span>Role</span>
@@ -159,23 +156,22 @@ const Imcas = () => {
                             </div>
                             <div className="undertitles__container--roles">
                                 <span>Date</span>
-                                <small>June 2019</small>
+                                <small>June - September 2019</small>
                             </div>
                             <div className="undertitles__container--roles">
                                 <span>Type</span>
-                                <small>Internship</small>
+                                <small>Internship work</small>
                             </div>
                         </div>
-                        <p><a target="_blank" href="https://www.imcas.com/en">Launch</a></p>
                     </div>
                 </div>
             </div>
             <div data-scroll-section className="imcas__container--first">
-                <Content title="Introduction">
-                    During 3 months I worked as a interface designer for IMCAS. A company that organise congress about surgery all around the world. More than 10 000 practitioners went to the last congress in January 2020 in Paris.
+                <Content title="Presentation">
+                    IMCAS is a company that organise congress in dermatology, plastic surgery and aesthetic science all around the world. In 2016 IMCAS launched IMCAS Academy, an international platform in medical aesthetics with videos to learn and network with experts.
                 </Content>
-                <Content title="Goal of the project">
-                    I did alot of differents things during my internship, I mostly redesigned the homepage in order for it to achieve the following goals :<br /> - Make the registration to a congress easier<br /> - Increase traffic to the feedback page.
+                <Content title="Improving buying flow">
+                    On the main website, when you wanna attend a congress, you need to buy a ticket. We had alot of feedback saying that users felt lost buying a ticket. We couldn’t change the entire flow so i suggested to work on the progress bar.
                 </Content>
                 <div data-scroll data-scroll-offset="-150%, 150%" className="first__container--images">
                     <img data-scroll data-scroll-speed={-0.4} src={crowd} />

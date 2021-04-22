@@ -6,12 +6,13 @@ import About from "../components/index/about"
 import Works from "../components/index/works"
 
 const StyledIndex = styled.div`
-
+max-width: 90%;
+margin: auto;
 `
 
 const IndexPage = () => (
   <StyledIndex>
-    <Intro />
+    <Intro/>
     {/* <About /> */}
     <Works/>
   </StyledIndex>

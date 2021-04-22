@@ -21,7 +21,7 @@ z-index: 100000000000000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1148px;
+    width: 90%;
     margin: 35px auto;
 }
 
@@ -47,7 +47,7 @@ p {
 
 a {
     font-family: 'nueue-regular';
-    color: ${props=>props.colors.content};
+    color: ${props=>props.colors.contentDarker};
     transition: 0.2s color;
     margin-left: 56px;
 }

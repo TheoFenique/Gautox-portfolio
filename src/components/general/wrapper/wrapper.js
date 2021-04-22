@@ -31,7 +31,6 @@ overflow: hidden;
 }
 
 .main-container {
-    max-width: 1148px;
     margin: 0 auto;
 }
 
