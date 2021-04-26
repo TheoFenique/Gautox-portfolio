@@ -12,25 +12,23 @@ justify-content: flex-start;
 width: 100%;
 margin-top: 150px;
 
+    .container {
+        max-width:100%;
+    }
+
     h1, p {
         color: ${props=>props.colors.contentDark};
         font-size: 32px;
         width:750px;
+        max-width: 100%;
         font-family: 'nueue-bold';
         line-height: 1.5;
-
-        @media screen and (max-width : 414px) {
-            font-size: 48px
-        }
 
         span {
             color:  ${props=>props.colors.contentDarker};
             font-family: 'nueue-bold';
             font-size: 32px;
 
-            @media screen and (max-width : 414px) {
-                font-size: 48px
-            }
         }
     }
 `
@@ -38,8 +36,8 @@ margin-top: 150px;
 
 const Intro = () => {
     return (
-        <StyledIntro colors={colors} data-scroll-section>
-            <div data-scroll data-scroll-speed="1" data-scroll-direction="vertical" className="container">
+        <StyledIntro colors={colors}>
+            <div className="container">
                 <p>Hey!</p>
                 <h1>I’m <span>Gautier Burias</span> !<br/> I’m a <span>Product Designer</span> from Paris<br/> & design student at <span>Hetic</span>.</h1>
             </div>

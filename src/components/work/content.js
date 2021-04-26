@@ -21,16 +21,21 @@ h2 {
     padding: 0;
     margin: 0;
     width: 40%;
-    text-align: justify;
     line-height: 1.2!important;
     color: ${props=>props.colors.contentDarker};
+    @media screen and (max-width : 730px) {
+        width: 70%;
+    }
 }
 >p {
     box-sizing: border-box;
     width: 40%;
     color: #9396A4;
     text-align: justify;
-    color: ${props=>props.colors.contentDark}
+    color: ${props=>props.colors.contentDark};
+    @media screen and (max-width : 730px) {
+        width: 70%;
+    }
 }
 `
 

@@ -7,8 +7,10 @@ import { colors } from '../../assets/style/colors'
 const StyledBeforeAfter = styled.div`
 display: flex;
 justify-content: center;
-width: 80%;
+width: 100%;
 margin: auto;
+
+
 
 h3 {
     font-size: 32px;
@@ -21,16 +23,23 @@ h3 {
     box-sizing: border-box;
     width: 25%;
     padding: 0 2%;
+    @media screen and (max-width : 730px) {
+       display: none;
+    }
 }
 
 .before h3, .before p {
     text-align: right;
 }
 
+
 .imgs {
     display: flex;
     justify-content: space-between;
     width: 50%;
+    @media screen and (max-width : 730px) {
+       width: 80%;
+    }
 
     img {
         width: 48%;

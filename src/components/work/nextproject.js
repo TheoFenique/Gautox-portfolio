@@ -26,9 +26,9 @@ a {
 
 const NextProject = ({ link }) => {
     return (
-        <StyledNextProject colors={colors} data-scroll-section>
-            <Link to={link} data-scroll>
-                <p>Got to next project</p>
+        <StyledNextProject colors={colors}>
+            <Link to={link}>
+                <p>Go to next project</p>
             </Link>
         </StyledNextProject>
     )

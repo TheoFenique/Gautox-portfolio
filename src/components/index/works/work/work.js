@@ -7,7 +7,22 @@ const StyledWork = styled.div`
 position: relative;
 display: inline-block;
 width: 47.5%;
-margin-top: 55px;
+min-width:320px;
+
+@media screen and (max-width : 730px) {
+    width: 80%;
+    margin: 55px auto;
+}
+
+:hover {
+    .img__container{
+
+        img {
+            transform: scale(1.15);
+            transition: all 0.6s cubic-bezier(0.75, 0, 0.25, 1);
+        }
+    }
+}
 
 .container__content {
     margin: 15px 0;
@@ -19,7 +34,6 @@ margin-top: 55px;
     }
     
     p {
-        width: 370px;
         font-family: 'nueue-bold';
         margin: 0;
         font-size: 18px;
@@ -28,9 +42,12 @@ margin-top: 55px;
 
 .img__container{
     width: 100%;
+    overflow: hidden;
 
     img {
         width: 100%;
+        transform: scale(1.1);
+        transition: all 0.6s cubic-bezier(0.75, 0, 0.25, 1);
     }
 }
 `
@@ -38,14 +55,14 @@ margin-top: 55px;
 
 const Work = (props) => {
     return (
-        <StyledWork data-scroll colors={colors} >
-            <Link data-scroll data-scroll-speed="1" data-scroll-direction="vertical"  to={props.work.link} className="container">
-                <div data-scroll className="img__container">
-                    <img data-scroll src={props.work.image} alt=""/>
+        <StyledWork colors={colors} >
+            <Link to={props.work.link} className="container">
+                <div className="img__container">
+                    <img src={props.work.image} alt=""/>
                 </div>
-                <div data-scroll className="container__content">
-                    <h3 data-scroll>{props.work.title}</h3>
-                    <p data-scroll>{props.work.content}</p>
+                <div className="container__content">
+                    <h3>{props.work.title}</h3>
+                    <p>{props.work.content}</p>
                 </div>
             </Link>
         </StyledWork>

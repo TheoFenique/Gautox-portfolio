@@ -82,9 +82,6 @@ overflow: hidden;
         flex-direction: column;
         position: relative;
         z-index: 10;
-        @media screen and (max-width : 1000px) {
-            margin-top: -18%;
-        }
     }
 
     h1 {
@@ -94,9 +91,6 @@ overflow: hidden;
         width: 60%;
         color: ${props=>props.colors.content};
         font-family: 'nueue-bold';
-        @media screen and (max-width : 1000px) {
-            font-size: 82px;
-        }
 
         span {
             color: white;
@@ -110,6 +104,7 @@ overflow: hidden;
         width: 60%;
         display: flex;
         margin-top: 40px;
+        flex-wrap: wrap;
 
         .undertitles__container--roles {
             display: flex;
@@ -132,15 +127,6 @@ overflow: hidden;
     position: relative;
     width: 55%;
     margin: auto;
-    
-    @media screen and (max-width: 1000px){
-        width: 600px;
-        height: 360px;
-    }
-    @media screen and (max-width: 600px){
-        width: 360px;
-        height: 129px;
-    }
 
     img {
         width: 100%;
@@ -186,11 +172,15 @@ h4 a {
     display: flex;
     width: 70%;
     margin: 80px auto;
+    flex-wrap: wrap;
 
     .video-content {
         box-sizing: border-box;
         width: 60%;
         padding-left: 3%;
+        @media screen and (max-width : 730px) {
+            width: 100%;
+        }
     }
 
     h3 {
@@ -202,6 +192,8 @@ h4 a {
 
     video {
         width: 40%;
+        min-width: 250px;
+        margin: auto;
     }
 }
 .video-reversed {
@@ -209,11 +201,15 @@ h4 a {
     width: 70%;
     margin: 80px auto;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
 
     .video-content {
         box-sizing: border-box;
         width: 60%;
         padding-right: 3%;
+        @media screen and (max-width : 730px) {
+            width: 100%;
+        }
     }
 
     h3 {
@@ -225,6 +221,8 @@ h4 a {
 
     video {
         width: 40%;
+        min-width: 250px;
+        margin: auto;
     }
 }
 
@@ -239,7 +237,7 @@ h5 {
 const Grenade = () => {
     return (
         <StyledGrenade colors={colors}>
-            <div data-scroll-section className="airbnb__container--header">
+            <div className="airbnb__container--header">
                 <MainImg img={mainImage} />
                 <div className="header__container--titles">
                     <div className="titles__container--flex">
@@ -319,6 +317,12 @@ const Grenade = () => {
                     <p>When buying a french product on one of our patners website, you can enter your Karmium Code to validate the action. Then once you open the app you have a notification that inform you that your action was validated !</p>
                 </div>
             </div>
+            <Content title="Reflection">
+            It was a really fun but intensive project, since we only had a week to do everything. 
+            If i had more time, i would have done a light theme to suit better the “social” aspect of the project. And more importantly : improve the UX by doing more users testing and more research. Thanks to my boi Théo Julien for doing this project with me.<br/><br/>
+
+            Thanks for reading.
+            </Content>
             <NextProject link="/work/imcas" />
         </StyledGrenade>
     )

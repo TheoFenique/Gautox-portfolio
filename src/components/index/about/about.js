@@ -216,18 +216,18 @@ a:hover {
 
 const About = () => {
     return (
-        <StyledAbout data-scroll-section>
+        <StyledAbout >
             <div className="about__container--main">
                 <div className="about__container--text">
-                    <div data-scroll className="about__container--content">
+                    <div  className="about__container--content">
                         <h2>About</h2>
                         <p>I’m a 20 years old interface designer and a third year student at Hetic. I’m looking for a five/six-month internship starting early April 2020 anywhere in the world. I’m also passionate about video games, animes and I listen to music 24/7.</p>
                     </div>
-                    <div data-scroll className="email__container--content">
+                    <div  className="email__container--content">
                         <h2>Email</h2>
                         <p><a href="mailto:gautier.burias92@gmail.com">Send me an email to talk!</a></p>
                     </div>
-                    <div data-scroll className="socials__container--content">
+                    <div  className="socials__container--content">
                         <h2>Social media</h2>
                         <div className="socials__container">
                             <a target="_blank" href={cv}>Resume</a>
@@ -237,25 +237,25 @@ const About = () => {
                     </div>
                 </div>
 
-                <div data-scroll className="about__container--passions">
-                    <div data-scroll data-scroll-speed="-0.8" data-scroll-offset="-50%" className="passion__container--second">
-                        <div data-scroll className="second__container">
-                            <p data-scroll data-scroll-speed="-3" data-scroll-offset="-50%">Scroll to know more about me</p>
-                            <div data-scroll className="passionimg__container">
+                <div  className="about__container--passions">
+                    <div className="passion__container--second">
+                        <div  className="second__container">
+                            <p>Scroll to know more about me</p>
+                            <div  className="passionimg__container">
                                 <img src={gautierlooking} alt="" />
                             </div>
                         </div>
                     </div>
-                    <div data-scroll data-scroll-speed="2" data-scroll-offset="-50%" className="passion__container--first">
-                        <div data-scroll className="first__container anime">
-                            <div data-scroll className="passionimg__container">
+                    <div className="passion__container--first">
+                        <div className="first__container anime">
+                            <div className="passionimg__container">
                                 <img src={anime} alt="" />
                             </div>
                             <span>Anime</span>
                         </div>
-                        <div data-scroll className="first__container music">
+                        <div  className="first__container music">
                             <span>Music</span>
-                            <div data-scroll className="passionimg__container">
+                            <div className="passionimg__container">
                                 <img src={eden} alt="" />
                             </div>
                         </div>

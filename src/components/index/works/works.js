@@ -15,9 +15,9 @@ width: 100%;
 
 const Works = () => {
     return (
-        <StyledWorks data-scroll-section colors={colors} >
+        <StyledWorks colors={colors} >
             {worksList.map((v, i, a) => 
-                <Work data-scroll key={i} work={v}/>
+                <Work key={i} work={v}/>
             )}
         </StyledWorks>
     )

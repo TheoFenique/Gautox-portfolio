@@ -21,7 +21,7 @@ const StyledMockup = styled.div`
 
 const Mockup = ({ title, img, direction, horizontal }) => {
     return (
-        <StyledMockup data-scroll data-scroll-offset="-50%" data-scroll-speed={direction} data-scroll-direction={horizontal ? "horizontal" : "vertical"}>
+        <StyledMockup>
             <span>{title}</span>
             <img src={img} alt="" />
         </StyledMockup>

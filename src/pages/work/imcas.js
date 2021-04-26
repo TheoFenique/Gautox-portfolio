@@ -4,7 +4,7 @@ import MainImg from '../../components/general/mainimg/Mainimg'
 import Content from '../../components/work/content'
 import NextProject from '../../components/work/nextproject'
 
-import mainImage from '../../assets/work/img/imcas.jpg'
+import mainImage from '../../assets/imcas/imcas.png'
 import badge from '../../assets/imcas/badge.png'
 import oldProgress from '../../assets/imcas/old-progress-bar.png'
 import naiProgress from '../../assets/imcas/nai-progress-bar.png'
@@ -35,9 +35,6 @@ overflow: hidden;
         flex-direction: column;
         position: relative;
         z-index: 10;
-        @media screen and (max-width : 1000px) {
-            margin-top: -18%;
-        }
     }
 
     h1 {
@@ -47,9 +44,6 @@ overflow: hidden;
         width: 60%;
         color: ${props=>props.colors.content};
         font-family: 'nueue-bold';
-        @media screen and (max-width : 1000px) {
-            font-size: 82px;
-        }
 
         span {
             color: white;
@@ -63,6 +57,8 @@ overflow: hidden;
         width: 60%;
         display: flex;
         margin-top: 40px;
+        flex-wrap: wrap;
+
 
         .undertitles__container--roles {
             display: flex;
@@ -86,16 +82,10 @@ overflow: hidden;
     position: relative;
     width: 55%;
     margin: auto;
+    @media screen and (max-width : 730px) {
+        width: 80%;
+    }
     
-    @media screen and (max-width: 1000px){
-        width: 600px;
-        height: 360px;
-    }
-    @media screen and (max-width: 600px){
-        width: 360px;
-        height: 129px;
-    }
-
     img {
         width: 100%;
         box-shadow: 0px 3px 8px rgba(0,3,8, 0.2);
@@ -118,6 +108,9 @@ overflow: hidden;
 
 .img-container-big {
     width: 70%;
+    @media screen and (max-width : 730px) {
+        width: 90%;
+    }
 }
 
 .content__container, .content__container, .content__container--third {

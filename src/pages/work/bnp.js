@@ -2,7 +2,7 @@ import React from 'react'
 import Role from '../../components/general/role'
 import styled from 'styled-components'
 
-import mainImage from '../../assets/grenadencie/main.png'
+import mainImage from '../../assets/bnp/bnp.png'
 
 import Content from '../../components/work/content'
 import MainImg from '../../components/general/mainimg/Mainimg'
@@ -70,6 +70,7 @@ overflow: hidden;
     flex-direction: column;
     align-items: center;
     padding: 56px 5%;
+    flex-wrap: wrap;
 
     .titles__container--flex {
         display: flex;
@@ -78,9 +79,7 @@ overflow: hidden;
         flex-direction: column;
         position: relative;
         z-index: 10;
-        @media screen and (max-width : 1000px) {
-            margin-top: -18%;
-        }
+       
     }
 
     h1 {
@@ -90,9 +89,6 @@ overflow: hidden;
         width: 60%;
         color: ${props=>props.colors.content};
         font-family: 'nueue-bold';
-        @media screen and (max-width : 1000px) {
-            font-size: 82px;
-        }
 
         span {
             color: white;
@@ -106,6 +102,7 @@ overflow: hidden;
         width: 60%;
         display: flex;
         margin-top: 40px;
+        flex-wrap: wrap;
 
         .undertitles__container--roles {
             display: flex;
@@ -128,7 +125,7 @@ overflow: hidden;
 const Airbnb = () => {
     return (
         <StyledAirbnb colors={colors}>
-            <div data-scroll-section className="airbnb__container--header">
+            <div  className="airbnb__container--header">
                 <MainImg img={mainImage} />
                 <div className="header__container--titles">
                     <div className="titles__container--flex">
@@ -150,8 +147,8 @@ const Airbnb = () => {
                     </div>
                 </div>
             </div>
-            <Content title="Introduction">
-                During 3 months I worked as a interface designer for IMCAS. A company that organise congress about surgery all around the world. More than 10 000 practitioners went to the last congress in January 2020 in Paris.
+            <Content title="Project under NDA">
+            This project is currently under an NDA. Please feel free to contact me for further details surrounding what I worked on with BNP and CB !
             </Content>
             <NextProject link="/work/karmium" />
         </StyledAirbnb>
