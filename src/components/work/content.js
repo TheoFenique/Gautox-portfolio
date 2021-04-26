@@ -22,9 +22,10 @@ h2 {
     margin: 0;
     width: 40%;
     text-align: justify;
+    line-height: 1.2!important;
     color: ${props=>props.colors.contentDarker};
 }
-p {
+>p {
     box-sizing: border-box;
     width: 40%;
     color: #9396A4;

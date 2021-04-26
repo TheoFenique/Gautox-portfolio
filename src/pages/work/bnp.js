@@ -2,7 +2,7 @@ import React from 'react'
 import Role from '../../components/general/role'
 import styled from 'styled-components'
 
-import mainImage from '../../assets/airbnb/img/airbnb-big.jpg'
+import mainImage from '../../assets/grenadencie/main.png'
 
 import Content from '../../components/work/content'
 import MainImg from '../../components/general/mainimg/Mainimg'
@@ -153,7 +153,7 @@ const Airbnb = () => {
             <Content title="Introduction">
                 During 3 months I worked as a interface designer for IMCAS. A company that organise congress about surgery all around the world. More than 10 000 practitioners went to the last congress in January 2020 in Paris.
             </Content>
-            <NextProject link="/work/portfolio" />
+            <NextProject link="/work/karmium" />
         </StyledAirbnb>
     )
 }

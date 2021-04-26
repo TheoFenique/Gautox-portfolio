@@ -67,7 +67,6 @@ const Navbar = () => {
                 </div>
                 <div className="navbar__container--links">
                     <Link to="/">Home</Link>
-                    <Link to="/work">Work</Link>
                 </div>
             </div>
         </StyledNavbar>

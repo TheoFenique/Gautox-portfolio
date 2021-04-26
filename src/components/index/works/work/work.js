@@ -27,7 +27,6 @@ margin-top: 55px;
 }
 
 .img__container{
-    background: #1E9481;
     width: 100%;
 
     img {

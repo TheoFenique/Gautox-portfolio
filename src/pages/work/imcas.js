@@ -1,21 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
-import Mockup from '../../components/work/mockup'
 import MainImg from '../../components/general/mainimg/Mainimg'
 import Content from '../../components/work/content'
 import NextProject from '../../components/work/nextproject'
 
 import mainImage from '../../assets/work/img/imcas.jpg'
-import mockupimg from '../../assets/airbnb/img/mockup.png'
-import crowd from '../../assets/imcas/crowd.png'
-import feedback from '../../assets/imcas/feedback.png'
-import imca from '../../assets/imcas/imca.png'
+import badge from '../../assets/imcas/badge.png'
+import oldProgress from '../../assets/imcas/old-progress-bar.png'
+import naiProgress from '../../assets/imcas/nai-progress-bar.png'
+import fullPage from '../../assets/imcas/fullpage.png'
+import opinion from '../../assets/imcas/opinion.png'
+import before from '../../assets/imcas/before.png'
+import after from '../../assets/imcas/after.png'
+
 import { colors } from '../../assets/style/colors'
+import BeforeAfter from '../../components/work/beforeAfter'
 
 
 const StyledImcas = styled.div`
 overflow: hidden;
-.imcas__container--header {
+.content__container--header {
 
     .header__container--titles {
     background: ${props=>props.colors.contentDarker};
@@ -78,29 +82,45 @@ overflow: hidden;
 }
 }
 
-.imcas__container--first,.imcas__container--second {
-    .first__container--images, .second__container--images {
-        position: relative;
-        padding-top: 50px; 
-        width: 1000px;
-        margin: auto;
-        
-        @media screen and (max-width: 1000px){
-            width: 600px;
-            height: 360px;
-        }
-        @media screen and (max-width: 600px){
-            width: 360px;
-            height: 129px;
-        }
+.img-container-small, .img-container-big {
+    position: relative;
+    width: 55%;
+    margin: auto;
+    
+    @media screen and (max-width: 1000px){
+        width: 600px;
+        height: 360px;
+    }
+    @media screen and (max-width: 600px){
+        width: 360px;
+        height: 129px;
+    }
 
-        img {
-            width: 100%;
-        }
+    img {
+        width: 100%;
+        box-shadow: 0px 3px 8px rgba(0,3,8, 0.2);
+        border-radius: 10px;
     }
 }
 
-.imcas__container--first, .imcas__container--second, .imcas__container--third {
+.comment {
+    img {
+        box-sizing: border-box;
+        padding: 5%;
+    }
+}
+
+.img-container-big, .img-container-small{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.img-container-big {
+    width: 70%;
+}
+
+.content__container, .content__container, .content__container--third {
     box-sizing: border-box;
     padding: 0 5%;
     margin: 100px 0;
@@ -132,19 +152,14 @@ overflow: hidden;
             text-align: justify;
         }
     }
-
-    .first__container--images, .second__container--images, .third__container--images{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
 }
+
 `
 
 const Imcas = () => {
     return (
         <StyledImcas colors={colors}>
-            <div data-scroll-section className="imcas__container--header">
+            <div className="content__container--header">
                 <MainImg img={mainImage} />
                 <div className="header__container--titles">
                     <div className="titles__container--flex">
@@ -166,38 +181,62 @@ const Imcas = () => {
                     </div>
                 </div>
             </div>
-            <div data-scroll-section className="imcas__container--first">
+            <div className="content__container">
                 <Content title="Presentation">
                     IMCAS is a company that organise congress in dermatology, plastic surgery and aesthetic science all around the world. In 2016 IMCAS launched IMCAS Academy, an international platform in medical aesthetics with videos to learn and network with experts.
                 </Content>
                 <Content title="Improving buying flow">
                     On the main website, when you wanna attend a congress, you need to buy a ticket. We had alot of feedback saying that users felt lost buying a ticket. We couldn’t change the entire flow so i suggested to work on the progress bar.
                 </Content>
-                <div data-scroll data-scroll-offset="-150%, 150%" className="first__container--images">
-                    <img data-scroll data-scroll-speed={-0.4} src={crowd} />
+                <div className="img-container-big">
+                    <img src={badge} />
                 </div>
             </div>
-
-            <div data-scroll-section className="imcas__container--second">
-                <Content title="Process">
-                    To increase the traffic on the feedback page, I put a feedback section with a CTA button in the homepage that link to the feedback page. And I redesigned the homepage UI to make it looks more modern.
+            <div className="content__container">
+                <Content>
+                    <b>The old progress bar looked like this !</b>
                 </Content>
-                <div data-scroll className="second__container--images">
-                    <div data-scroll data-scroll-offset="-150%, 150%" className="first__container--images">
-                        <img data-scroll data-scroll-speed={-0.4} src={feedback} />
-                    </div>
+                <div className="img-container-small" >
+                    <img src={oldProgress} />
                 </div>
-            </div>
-
-            <div data-scroll-section className="imcas__container--third">
-                <Content title="And more...">
-                    I also created 2 landing pages (I can’t show them here since they are not out yet) redesigned others pages of the site, redesigned the mobile menu to add hierarchy, simplicity and intuitivty.
+                <Content>
+                    In order to improve it, I suggested to display all the steps, even tho the users is not yet on them. It make it easier for the user to see where he’s going next. Then I added color and 3 differents state to make things even more clear :
                 </Content>
-                <div data-scroll className="third__container--images">
-                    <Mockup direction={"-0.4"} title="Adding hierarchy, intuitivity thanks to the indentation." img={imca} />
+                <div className="img-container-small" >
+                    <img src={naiProgress} />
                 </div>
             </div>
-            <NextProject link="/work/airbnb" />
+            <div className="content__container">
+                <Content title="Increase the trafic on the feedback page">
+                    IMCAS had a really valuable feedback page that they wanted to bring to the spotlight. But trafic on this page was quite low. After some research I suggested adding a feedback section on the homepage as a “Social proof” that will redirect to the Feedback page. It ended up improving the trafic on the feedback page by alot !
+                </Content>
+                <div className="img-container-small comment" >
+                    <img src={opinion} />
+                </div>
+                <Content title="Creating a landing Page">
+                    IMCAS wanted a landing page to promote IMCAS Academy, the e-learning platform of IMCAS. The page needed to showcase multiples features, as well as the IOS/Android App.
+                </Content>
+                <div className="img-container-big">
+                    <img src={fullPage} />
+                </div>
+                <Content title="Redesigning the responsive menu">
+                    A lot of IMCAS website user’s are on mobile so I had the mission to improve the responsive menu that was lacking clarity and consistency.
+                </Content>
+                <BeforeAfter
+                    beforeImg={before}
+                    beforeContent="It was kinda lacking consistency and the color were all over the places, also it was scrollable which was not a good experience."
+                    afterImg={after}
+                    afterContent="I cleared the color problems, used indentation to make opening menu so the menu is more organised and not scrollable anymore."
+                />
+                <Content title="And others missions">
+                    I also redesigned pages of the Academy Website, worked on the IMCAS App and others stuff ! I wanted to showcase differents types of works in this case study that’s why i selected to show thoses projets.
+                </Content>
+                <Content title="Reflection ">
+                    Overall it was a nice experience working on products that thousands of people use, knowing how the datas influence what I will work on was also interesting ! I think I did well during this internship but there are many things I wish I could have done differently, but hey it’s over now, time to move on!<br/><br/>
+                    Thanks for reading.
+                </Content>
+            </div>
+            <NextProject link="/work/grenadinencie" />
         </StyledImcas>
     )
 }
