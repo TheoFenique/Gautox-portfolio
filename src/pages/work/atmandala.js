@@ -126,7 +126,7 @@ const ATMandala = () => {
                 <MainImg img={mainImage} />
                 <div className="header__container--titles">
                     <div className="titles__container--flex">
-                        <h1>The goal of this school project was to make a mandala using the theme of our choice. I choosed “Adventure Time” since im a fan of the show! This project was made using Illustrator.</h1>
+                        <h1>The goal of this school project was to make a mandala using the theme of our choice. I chose “Adventure Time” since im a fan of the show! This project was made using Illustrator.</h1>
                         <div className="titles__container--undertitles">
                             <div className="undertitles__container--roles">
                                 <span>Role</span>

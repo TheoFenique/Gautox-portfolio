@@ -24,7 +24,7 @@ const MainImg = ({ img }) => {
     const [scroll, setScroll] = useState(window.scrollY / window.innerHeight);
 
     let scale = 1+(scroll)/6    
-    let translate = scroll * -120
+    let translate = scroll * -150
 
     useEffect(() => {
 

@@ -14,6 +14,7 @@ margin-top: 150px;
 
     .container {
         max-width:100%;
+        margin-bottom: 80px;
     }
 
     h1, p {

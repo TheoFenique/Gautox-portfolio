@@ -1,7 +1,7 @@
-import bnpImage from '../../../assets/bnp/miniature.png'
-import karmium from '../../../assets/karmium/miniature_karmium.png'
-import grenadines from '../../../assets/grenadencie/grenadines_miniature.png'
-import imcas from '../../../assets/imcas/imcas_miniature.png'
+import bnpImage from '../../../assets/miniature/BNP.jpg'
+import karmium from '../../../assets/miniature/KARMIUM.jpg'
+import grenadines from '../../../assets/miniature/GRENADINES.jpg'
+import imcas from '../../../assets/miniature/IMCAS.jpg'
 import mandala from '../../../assets/mandala/mandala_miniature.png'
 
 

@@ -34,13 +34,18 @@ const StyledAbout = styled.div`
         color: ${props=>props.colors.contentDarker};
         font-size: 32px;
         font-family: 'nueue-bold';
-        margin-top: 0;
+        margin: 0;
     }
     
     .socials__container {
         width: 80%;
         display: flex;
         justify-content: space-between;
+
+        a:hover {
+            color: #DD4247;
+            transition: 0.3s all;
+        }
     }
 }
 
@@ -50,6 +55,7 @@ const StyledAbout = styled.div`
     overflow: hidden;
     margin-top: -300px;
 }
+
 h6 {
     position: relative;
     width: 3000px;
@@ -65,10 +71,6 @@ h6 {
 const About = () => {
 
     const [scroll, setScroll] = useState(1000 - (3000 * (window.scrollY / window.innerHeight)));
-
-    const style = {
-        transform: "rotate(-24deg) translateX("+scroll+")" 
-    }
 
     useEffect(() => {
 
@@ -90,7 +92,7 @@ const About = () => {
                 <div className="about__container--text">
                     <div  className="about__container--content">
                         <h2>About</h2>
-                        <p>I’m a 20 years old interface designer and a third student at Hetic. I’m looking for a six-month internship from June 2021 to January 2022 anywhere in the world. I’m also passionate about video games, animes and I listen to music 24/7. Oh and i’m currently writing a design article on Medium stay tuned ! </p>
+                        <p>I’m a 21 years old interface designer and a fourth year student at Hetic. I’m looking for a six-month internship from June 2021 to January 2022 anywhere in the world. I’m also passionate about video games, animes and I listen to music 24/7. Oh and i’m currently writing a design article on Medium stay tuned ! </p>
                     </div>
                     <div  className="email__container--content">
                         <h2>Email</h2>
@@ -102,7 +104,7 @@ const About = () => {
                             <a target="_blank" href={cv}>Resume</a>
                             <a target="_blank" href="https://www.linkedin.com/in/gautier-burias-a08a41164/">Linkedin</a>
                             <a target="_blank" href="https://dribbble.com/GautierBurias">Dribbble</a>
-                            <a target="_blank" href="https://dribbble.com/GautierBurias">Medium</a>
+                            <a target="_blank" href="https://medium.com/@gautierburias">Medium</a>
                         </div>
                     </div>
                 </div>
@@ -111,7 +113,7 @@ const About = () => {
                 </div>
             </div>
             <div className="bigassfont">
-                <h6 style={{transform: "rotate(-24deg) translate("+scroll+"px )"}}>create things . make memes . skateboarding at 3am . listen to EDEN songs . play league . have fun with Interactive Components in Figma . eat good good food . watch anime . play minecraft . alot of others stuff... oh hello !</h6>
+                <h6 style={{transform: "rotate(-24deg) translate("+scroll+"px )"}}>create things . skateboarding at 3am . listen to EDEN songs . play with Interactive Components in Figma . make memes . play minecraft & league . eat good good food . watch anime . alot of others stuff... oh hello !</h6>
             </div>
         </StyledAbout>
     )

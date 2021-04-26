@@ -29,7 +29,7 @@ z-index: 100000000000000;
     height: 100%;
 
     span {
-        font-size: 48px;
+        font-size: 32px;
         font-family: 'nueue-bold';
         color: ${props=>props.colors.contentDarker}
     }
@@ -38,6 +38,12 @@ z-index: 100000000000000;
 .navbar__container--links {
     display: flex;
     justify-content: space-between;
+    a {
+        font-family: 'nueue-regular';
+        color: ${props=>props.colors.contentDarker};
+        transition: 0.2s color;
+        margin-left: 56px;
+    }
 }
 
 p {
@@ -45,12 +51,6 @@ p {
     font-family: circular;
 }
 
-a {
-    font-family: 'nueue-regular';
-    color: ${props=>props.colors.contentDarker};
-    transition: 0.2s color;
-    margin-left: 56px;
-}
 
 a:hover {
     color: ${props=>props.colors.contentDark}
@@ -63,7 +63,7 @@ const Navbar = () => {
         <StyledNavbar colors={colors}>
             <div className="navbar__container">
                 <div className="navbar__container--logo">
-                    <span>G</span>
+                    <Link to="/"><span>G</span></Link>
                 </div>
                 <div className="navbar__container--links">
                     <Link to="/">Home</Link>

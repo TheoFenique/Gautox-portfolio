@@ -11,21 +11,22 @@ min-width:320px;
 
 @media screen and (max-width : 730px) {
     width: 80%;
-    margin: 55px auto;
+    margin: auto;
 }
 
 :hover {
     .img__container{
 
         img {
-            transform: scale(1.15);
-            transition: all 0.6s cubic-bezier(0.75, 0, 0.25, 1);
+            transform: scale(1.2);
+            transition: cubic-bezier(.19,1,.22,1) 1s;
         }
     }
 }
 
 .container__content {
-    margin: 15px 0;
+    margin: 0 0 80px 0;
+
     h3 {
         font-family: 'nueue-bold';
         font-size: 32px;
@@ -47,7 +48,7 @@ min-width:320px;
     img {
         width: 100%;
         transform: scale(1.1);
-        transition: all 0.6s cubic-bezier(0.75, 0, 0.25, 1);
+        transition: cubic-bezier(.19,1,.22,1) 1s;
     }
 }
 `

@@ -4,7 +4,7 @@ import MainImg from '../../components/general/mainimg/Mainimg'
 import Content from '../../components/work/content'
 import NextProject from '../../components/work/nextproject'
 
-import mainImage from '../../assets/imcas/imcas.png'
+import mainImage from '../../assets/imcas/imcas_full.png'
 import badge from '../../assets/imcas/badge.png'
 import oldProgress from '../../assets/imcas/old-progress-bar.png'
 import naiProgress from '../../assets/imcas/nai-progress-bar.png'
@@ -187,7 +187,7 @@ const Imcas = () => {
             </div>
             <div className="content__container">
                 <Content>
-                    <b>The old progress bar looked like this !</b>
+                    <b>The old progress bar looked like this:</b>
                 </Content>
                 <div className="img-container-small" >
                     <img src={oldProgress} />
@@ -224,7 +224,7 @@ const Imcas = () => {
                 <Content title="And others missions">
                     I also redesigned pages of the Academy Website, worked on the IMCAS App and others stuff ! I wanted to showcase differents types of works in this case study that’s why i selected to show thoses projets.
                 </Content>
-                <Content title="Reflection ">
+                <Content title="Reflection">
                     Overall it was a nice experience working on products that thousands of people use, knowing how the datas influence what I will work on was also interesting ! I think I did well during this internship but there are many things I wish I could have done differently, but hey it’s over now, time to move on!<br/><br/>
                     Thanks for reading.
                 </Content>

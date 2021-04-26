@@ -2,7 +2,9 @@ import React from 'react'
 import Role from '../../components/general/role'
 import styled from 'styled-components'
 
-import mainImage from '../../assets/bnp/bnp.png'
+import mainImage from '../../assets/bnp/bnp_full.png'
+import bnpImage from '../../assets/miniature/BNP.jpg'
+
 
 import Content from '../../components/work/content'
 import MainImg from '../../components/general/mainimg/Mainimg'

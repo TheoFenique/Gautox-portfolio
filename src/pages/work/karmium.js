@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import mainImage from '../../assets/karmium/karmium.png'
+import mainImage from '../../assets/karmium/karmium_full.jpg'
 
 import Content from '../../components/work/content'
 import MainImg from '../../components/general/mainimg/Mainimg'
@@ -162,7 +162,7 @@ h4 {
 
 h4 a {
     font-family: 'nueue-bold';
-    font-size: 32px;
+    font-size: 24px;
     color: ${props => props.colors.contentDarker};
     text-align: center;
     text-decoration: underline;
@@ -176,7 +176,7 @@ h4 a {
 
     .video-content {
         box-sizing: border-box;
-        width: 60%;
+        width: 70%;
         padding-left: 3%;
         @media screen and (max-width : 730px) {
             width: 100%;
@@ -191,7 +191,7 @@ h4 a {
     }
 
     video {
-        width: 40%;
+        width: 30%;
         min-width: 250px;
         margin: auto;
     }
@@ -205,7 +205,7 @@ h4 a {
 
     .video-content {
         box-sizing: border-box;
-        width: 60%;
+        width: 70%;
         padding-right: 3%;
         @media screen and (max-width : 730px) {
             width: 100%;
@@ -220,7 +220,7 @@ h4 a {
     }
 
     video {
-        width: 40%;
+        width: 30%;
         min-width: 250px;
         margin: auto;
     }
@@ -241,19 +241,19 @@ const Grenade = () => {
                 <MainImg img={mainImage} />
                 <div className="header__container--titles">
                     <div className="titles__container--flex">
-                        <h1>During my UX/UI design internship at <span>Grenadines</span> I worked on the redesign of <span>Histoire & Patrimoine</span> website & the redesign of the <span>L&P Immobilier</span> website (not out yet !) and many others stuff ! I mainly did UX, UI, Branding and Data analytics.</h1>
+                        <h1>We had a week to design a product that help people and make the world a better place. With <a href="https://theojullien.fr/"><span>Théo Julien</span></a>, we created an app for a cryptocurrency that take values with social actions ! My work here was UX/UI and prototyping.</h1>
                         <div className="titles__container--undertitles">
                             <div className="undertitles__container--roles">
                                 <span>Role</span>
-                                <small>UX/UI, Branding, Data analytics </small>
+                                <small>UX/UI Designer</small>
                             </div>
                             <div className="undertitles__container--roles">
                                 <span>Date</span>
-                                <small>July - November</small>
+                                <small>May 2021</small>
                             </div>
                             <div className="undertitles__container--roles">
                                 <span>Type</span>
-                                <small>Internship work</small>
+                                <small>School Project</small>
                             </div>
                         </div>
                     </div>
@@ -278,7 +278,7 @@ const Grenade = () => {
                     <li>Buy, sell and trade cryptocurrency</li>
                 </ul>
             </Content>
-            <h4><a href="">Jump to the prototype</a></h4>
+            <h4><a target="_blank" href="https://www.figma.com/proto/dfYJZVBhDNfowtnYUAHlIe/Karmium?node-id=1%3A13544&viewport=1887%2C502%2C0.16447992622852325&scaling=scale-down&page-id=0%3A1">Jump to the prototype</a></h4>
             <div className="video">
                 <video src={vidOnboard} autoplay="true" muted="true" loop></video>
                 <div className="video-content">

@@ -1,4 +1,10 @@
 module.exports = {
+  siteMetadata: {
+    title: `Gautier Burias - Product designer & design student`,
+    siteUrl: `https://www.gautierburias.fr`,
+    description: `I'm a 4th year student at HETIC and a product designer working for companies and agencies ! 
+    I'm passionnate about creating meaningful and clean design to solve users problems.`,
+  },
   plugins: [
     {
       resolve: `gatsby-transformer-sharp`

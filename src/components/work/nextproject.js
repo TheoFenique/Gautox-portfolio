@@ -13,14 +13,23 @@ a {
     text-decoration: none;
     margin: 56px 5% 56px 0px;
     padding: 1% 0;
+
+    
+
     p {
         color: white;
         font-size: 32px;
         margin: 0;
         line-height: 1;
-        transition: all 0.3s;
-        font-family: 'nueue-bold'
+        font-family: 'nueue-bold';
+        transition: 0.3s all;
+
+        &:hover {
+            color: #DD4247;
+            transition: 0.3s all;
+        }
     } 
+
 }
 `
 

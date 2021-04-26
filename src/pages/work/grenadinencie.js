@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import mainImage from '../../assets/grenadencie/main.png'
+import mainImage from '../../assets/grenadencie/grenade_full.png'
 
 import Content from '../../components/work/content'
 import MainImg from '../../components/general/mainimg/Mainimg'
@@ -156,10 +156,10 @@ overflow: hidden;
 
 h3 {
     font-family: 'nueue-bold';
-    font-size: 32px;
+    font-size: 18px;
     color: ${props => props.colors.contentDarker};
     text-align: center;
-    margin: 0 0 80px 0;
+    margin: 20px 0 80px 0;
 }
 `
 
@@ -170,7 +170,7 @@ const Airbnb = () => {
                 <MainImg img={mainImage} />
                 <div className="header__container--titles">
                     <div className="titles__container--flex">
-                        <h1>During my UX/UI design internship at <span>Grenadines</span> I worked on the redesign of <span>Histoire & Patrimoine</span> website & the redesign of the <span>L&P Immobilier</span> website (not out yet !) and many others stuff ! I mainly did UX, UI, Branding and Data analytics.</h1>
+                        <h1>During my UX/UI design internship at <span>Grenadines</span> I worked on the redesign of  <a href="https://www.histoire-patrimoine.fr/"><span>Histoire & Patrimoine</span></a> website & the redesign of the <span>L&P Immobilier</span> website (not out yet !) and many others stuff ! I mainly did UX, UI, Branding and Data analytics.</h1>
                         <div className="titles__container--undertitles">
                             <div className="undertitles__container--roles">
                                 <span>Role</span>
@@ -178,7 +178,7 @@ const Airbnb = () => {
                             </div>
                             <div className="undertitles__container--roles">
                                 <span>Date</span>
-                                <small>July - November</small>
+                                <small>July - November 2020</small>
                             </div>
                             <div className="undertitles__container--roles">
                                 <span>Type</span>

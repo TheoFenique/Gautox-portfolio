@@ -31,7 +31,6 @@ h2 {
     box-sizing: border-box;
     width: 40%;
     color: #9396A4;
-    text-align: justify;
     color: ${props=>props.colors.contentDark};
     @media screen and (max-width : 730px) {
         width: 70%;
