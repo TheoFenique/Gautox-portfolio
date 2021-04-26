@@ -156,11 +156,11 @@ const Imcas = () => {
                 <MainImg img={mainImage} />
                 <div className="header__container--titles">
                     <div className="titles__container--flex">
-                        <h1>During my internship at IMCAS, I worked on the digital team as the sole UX/UI designer and helped developers to improve the UX of the website.</h1>
+                        <h1>During my internship at IMCAS, I worked on the digital team as the sole UX/UI designer and helped developers to improve the UX of their products.</h1>
                         <div className="titles__container--undertitles">
                             <div className="undertitles__container--roles">
                                 <span>Role</span>
-                                <small>Designer</small>
+                                <small>UX/UI Designer</small>
                             </div>
                             <div className="undertitles__container--roles">
                                 <span>Date</span>

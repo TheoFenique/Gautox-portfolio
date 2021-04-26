@@ -43,7 +43,12 @@ z-index: 100000000000000;
         color: ${props=>props.colors.contentDarker};
         transition: 0.2s color;
         margin-left: 56px;
+        
     }
+    a:hover {
+            color: #DD4247;
+            transition: 0.3s all;
+        }
 }
 
 p {

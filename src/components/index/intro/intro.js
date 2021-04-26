@@ -18,7 +18,7 @@ margin-top: 150px;
     }
 
     h1, p {
-        color: ${props=>props.colors.contentDark};
+        color: ${props=>props.colors.content};
         font-size: 32px;
         width:750px;
         max-width: 100%;

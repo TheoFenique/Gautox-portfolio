@@ -241,7 +241,7 @@ const Grenade = () => {
                 <MainImg img={mainImage} />
                 <div className="header__container--titles">
                     <div className="titles__container--flex">
-                        <h1>We had a week to design a product that help people and make the world a better place. With <a href="https://theojullien.fr/"><span>Théo Julien</span></a>, we created an app for a cryptocurrency that take values with social actions ! My work here was UX/UI and prototyping.</h1>
+                        <h1>We had a week to design a product that help people and make the world a better place. With <a target="_blank" href="https://theojullien.fr/"><span>Théo Julien</span></a>, we created an app for a cryptocurrency that take values with social actions ! My work here was UX/UI and prototyping.</h1>
                         <div className="titles__container--undertitles">
                             <div className="undertitles__container--roles">
                                 <span>Role</span>

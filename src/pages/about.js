@@ -34,7 +34,16 @@ const StyledAbout = styled.div`
         color: ${props=>props.colors.contentDarker};
         font-size: 32px;
         font-family: 'nueue-bold';
+        margin: 56px 0 0 0;
+    }
+
+    p {
         margin: 0;
+
+        a:hover {
+            color: #DD4247;
+            transition: 0.3s all;
+        }
     }
     
     .socials__container {

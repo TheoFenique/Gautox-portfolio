@@ -38,6 +38,7 @@ min-width:320px;
         font-family: 'nueue-bold';
         margin: 0;
         font-size: 18px;
+        color: ${props => props.colors.content};
     }
 }
 
