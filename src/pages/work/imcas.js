@@ -88,7 +88,7 @@ overflow: hidden;
     
     img {
         width: 100%;
-        box-shadow: 0px 3px 8px rgba(0,3,8, 0.2);
+        box-shadow: 0px 3px 8px rgba(0,3,8, 0.1);
         border-radius: 10px;
     }
 }
