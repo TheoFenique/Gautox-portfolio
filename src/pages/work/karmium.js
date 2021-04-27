@@ -170,13 +170,13 @@ h4 a {
 
 .video {
     display: flex;
-    width: 70%;
+    width: 60%;
     margin: 80px auto;
     flex-wrap: wrap;
 
     .video-content {
         box-sizing: border-box;
-        width: 70%;
+        width: 65%;
         padding-left: 3%;
         @media screen and (max-width : 730px) {
             width: 100%;
@@ -191,21 +191,21 @@ h4 a {
     }
 
     video {
-        width: 30%;
-        min-width: 250px;
+        width: 35%;
+        min-width: 200px;
         margin: auto;
     }
 }
 .video-reversed {
     display: flex;
-    width: 70%;
+    width: 60%;
     margin: 80px auto;
     flex-direction: row-reverse;
     flex-wrap: wrap;
 
     .video-content {
         box-sizing: border-box;
-        width: 70%;
+        width: 65%;
         padding-right: 3%;
         @media screen and (max-width : 730px) {
             width: 100%;
@@ -220,8 +220,8 @@ h4 a {
     }
 
     video {
-        width: 30%;
-        min-width: 250px;
+        width: 35%;
+        min-width: 200px;
         margin: auto;
     }
 }
