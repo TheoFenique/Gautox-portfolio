@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import mainImage from '../../assets/mandala/mandala.jpg'
+import mainImage from '../../assets/mandala/mandala_full.png'
 
 import Content from '../../components/work/content'
 import MainImg from '../../components/general/mainimg/Mainimg'
