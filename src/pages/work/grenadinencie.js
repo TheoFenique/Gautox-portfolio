@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import mainImage from '../../assets/grenadencie/grenade_full.jpg'
+import mainImage from '../../assets/grenadencie/grenadines_full.jpg'
 
 import Content from '../../components/work/content'
 import MainImg from '../../components/general/mainimg/Mainimg'
